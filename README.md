@@ -82,6 +82,12 @@ sudo apt install net-tools
 sudo service docker start
 ```
 
+以下のコマンドで、dockerイメージをpullします。
+
+```
+bash docker/pull-image.bash 
+```
+
 ### 箱庭のインストール
 
 以下の順番でインストールします。
@@ -141,6 +147,14 @@ total 134084
 -rwxr-xr-x 1 root root       297 Jan 27 11:30 hako-master
 -rwxr-xr-x 1 root root 128329896 Jan 27 11:30 hako-master-rust
 -rwxr-xr-x 1 root root   1062680 Jan 27 11:19 hako-proxy
+```
+
+
+~/.bashrc ファイルに以下の行を追加してください。
+
+```
+export LD_LIBRARY_PATH=/usr/local/lib/hakoniwa:$LD_LIBRARY_PATH
+export PATH=/usr/local/bin/hakoniwa:$PATH
 ```
 
 # アプリ新規追加手順
