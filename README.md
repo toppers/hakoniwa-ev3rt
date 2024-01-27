@@ -218,7 +218,7 @@ bash docker/build.bash <app>
 bash docker/build.bash HakoniwaApp
 ```
 
-バイナリファイルは、アプリケーションフォルダに配置し荒れます。
+バイナリファイルは、アプリケーションフォルダに配置されます。
 
 ```
 workspace/dev/src/HakoniwaApp/asp
