@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ !-d workspace/run/run.bash ]
+if [ !-f workspace/run/run.bash ]
 then
     echo "ERROR: can not find run.bash on workspace/run"
     exit 1
@@ -40,3 +40,5 @@ while true; do
         break
     fi
 done
+
+bash workspace/run/rm_ipcs.bash

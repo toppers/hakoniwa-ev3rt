@@ -1,1 +1,2 @@
 train_slow_stop:athrill.log
+block_signal:athrill.log
