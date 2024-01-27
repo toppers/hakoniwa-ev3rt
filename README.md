@@ -238,6 +238,19 @@ bash docker/build.bash HakoniwaApp
 workspace/dev/src/HakoniwaApp/asp
 ```
 
+## `workspace/run/asset_def.txt`を自分のアプリケーション名に変更する
+
+以下の書式で自分のアプリケーション名を設定します。複数ある場合は複数行指定できます。
+
+```
+<アプリケーション名>:athrill.log
+```
+
+例：
+
+```
+HakoniwaApp:athrill.log
+```
 
 # シミュレーション手順
 
