@@ -85,7 +85,62 @@ sudo service docker start
 
 以下の順番でインストールします。
 
+必要なソフトのインストール：
 
+```
+bash install.bash prepare
+```
+
+箱庭のインストール：
+
+```
+bash install.bash hakoniwa
+```
+
+箱庭コンダクタのインストール：
+
+```
+bash install.bash conductor
+```
+
+Athrillのインストール：
+
+```
+bash install.bash athrill
+```
+
+
+Athrill Device のインストール：
+
+```
+bash install.bash athrill_device
+```
+
+
+成功するとこうなります。
+
+```sh
+ ls -l /usr/local/lib/hakoniwa/
+total 4532
+drwxr-xr-x 3 root  root     4096 Jan 27 11:19 hako_binary
+-rwxr-xr-x 1 root  root   726176 Jan 27 11:19 hakoc.so
+-rwxr-xr-x 1 root  root  1716536 Jan 27 11:19 libhakoarun.a
+-rwxr-xr-x 1 root  root   729800 Jan 27 11:41 libhakopdu.so
+-rwxr-xr-x 1 root  root   717208 Jan 27 11:41 libhakotime.so
+-rwxr-xr-x 1 root  root   726176 Jan 27 11:19 libshakoc.so
+drwxrwxrwx 3 tmori tmori    4096 Jan 27 10:27 py
+```
+
+```sh
+ ls -l /usr/local/bin/hakoniwa/
+total 134084
+-rwxr-xr-x 1 root root   7464776 Jan 27 11:35 athrill2
+-rwxr-xr-x 1 root root       194 Jan 27 11:30 hako-cleanup
+-rwxr-xr-x 1 root root    427016 Jan 27 11:19 hako-cmd
+-rwxr-xr-x 1 root root       297 Jan 27 11:30 hako-master
+-rwxr-xr-x 1 root root 128329896 Jan 27 11:30 hako-master-rust
+-rwxr-xr-x 1 root root   1062680 Jan 27 11:19 hako-proxy
+```
 
 # ビルド手順
 
