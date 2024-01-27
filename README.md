@@ -204,4 +204,53 @@ DEBUG_FUNC_HAKO_ROBO_NAME       HakoniwaRobo
 
 # ビルド手順
 
+EV3RT用のアプリケーションのビルドは、docker コンテナで行います。
+
+以下のコマンド引数　`<app>`　に自分のアプリケーション名を入れることでビルドできます。
+
+```
+bash docker/build.bash <app>
+```
+
+例：
+
+```
+bash docker/build.bash HakoniwaApp
+```
+
+バイナリファイルは、アプリケーションフォルダに配置し荒れます。
+
+```
+workspace/dev/src/HakoniwaApp/asp
+```
+
+
 # シミュレーション手順
+
+
+以下のコマンドで箱庭を起動し、待機状態にします。
+
+```
+bash workspace/run/run.bash 
+```
+
+成功するとこうなります。
+
+```
+INFO: ACTIVATING HAKONIWA-CONDUCTOR
+OPEN RECIEVER UDP PORT=172.29.246.4:54001
+OPEN SENDER UDP PORT=172.29.246.4:54002
+delta_msec = 20
+max_delay_msec = 100
+INFO: shmget() key=255 size=1129352
+Server Start: 172.29.246.4:50051
+INFO: START train_slow_stop
+INFO: START block_signal
+START
+Press ENTER to stop...
+```
+
+ここから30秒以内に、Unity側のシミュレーションを開始してください。
+
+なお、シミュレーションを停止するには、Unityのシミュレーションを終了させてから、本端末上でエンターキーを押します。
+
