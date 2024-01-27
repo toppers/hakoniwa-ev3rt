@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ !-f workspace/run/run.bash ]
+if [ ! -f workspace/run/run.bash ]
 then
     echo "ERROR: can not find run.bash on workspace/run"
     exit 1
