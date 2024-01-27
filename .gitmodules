@@ -4,3 +4,9 @@
 [submodule "hakoniwa-conductor"]
 	path = hakoniwa-conductor
 	url = https://github.com/toppers/hakoniwa-conductor.git
+[submodule "athrill-target-v850e2m"]
+	path = athrill-target-v850e2m
+	url = https://github.com/toppers/athrill-target-v850e2m.git
+[submodule "athrill-device"]
+	path = athrill-device
+	url = https://github.com/toppers/athrill-device.git
