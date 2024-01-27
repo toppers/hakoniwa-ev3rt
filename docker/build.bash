@@ -43,5 +43,6 @@ else
         -it --rm \
         --net host \
         -e APP_NAME=${APP_NAME} \
-        --name ${IMAGE_NAME} ${DOCKER_IMAGE} 
+        --name ${IMAGE_NAME} ${DOCKER_IMAGE} \
+        /bin/bash /root/ev3rt-athrill-v850e2m/sdk/src/build.bash
 fi
