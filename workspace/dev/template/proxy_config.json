@@ -1,0 +1,23 @@
+{
+    "asset_name": "athrill-appname-1",
+    "robo_name": "Roboname",
+    "target_exec_dir": ".",
+    "target_bin_path": "/usr/local/bin/hakoniwa/athrill2",
+    "target_options": [
+        "-c1",
+        "-t",
+        "-1",
+        "-d",
+        "./device_config.txt",
+        "-m",
+        "./memory.txt",
+        "./asp"
+    ],
+    "target_channels": [
+	    {
+		    "channel_id": 0,
+		    "size": 196
+	    }
+    ]
+}
+

@@ -1,20 +1,30 @@
 #!/bin/bash
 
-sudo apt-get install -y cargo
-sudo apt-get install -y protobuf-compiler
-sudo apt-get install -y build-essential
-sudo apt-get install -y libc++-dev libc++abi-dev
-
-if [ ! -d /usr/local/lib/hakoniwa ]
+if [ $# -ne 1 ]
 then
-    sudo mkdir /usr/local/lib/hakoniwa
-fi
-if [ ! -d /usr/local/bin/hakoniwa ]
-then
-    sudo mkdir /usr/local/bin/hakoniwa
+    echo "Usage: $0 {prepare|hakoniwa|conductor|athrill|athrill_device}"
+    exit 1
 fi
 
+OPT=${1}
 CURR_DIR=`pwd`
+
+function install_prepare()
+{
+    sudo apt-get install -y cargo
+    sudo apt-get install -y protobuf-compiler
+    sudo apt-get install -y build-essential
+    sudo apt-get install -y libc++-dev libc++abi-dev
+
+    if [ ! -d /usr/local/lib/hakoniwa ]
+    then
+        sudo mkdir /usr/local/lib/hakoniwa
+    fi
+    if [ ! -d /usr/local/bin/hakoniwa ]
+    then
+        sudo mkdir /usr/local/bin/hakoniwa
+    fi
+}
 
 function install_hakoniwa()
 {
@@ -57,7 +67,27 @@ function install_athrill_device()
     sudo cp athrill-device/device/hakopdu/cmake-build/libhakopdu.* /usr/local/lib/hakoniwa/
 }
 
-install_hakoniwa
-install_conductor
-install_athrill
-install_athrill_device
+if [ ${OPT} = "prepare" ]
+then
+    install_prepare
+fi
+
+if [ ${OPT} = "hakoniwa" ]
+then
+    install_hakoniwa
+fi
+
+if [ ${OPT} = "conductor" ]
+then
+    install_conductor
+fi
+
+if [ ${OPT} = "athrill" ]
+then
+    install_athrill
+fi
+
+if [ ${OPT} = "athrill_device" ]
+then
+    install_athrill_device
+fi
